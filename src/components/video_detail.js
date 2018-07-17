@@ -1,8 +1,16 @@
 import React from 'react';
+import Loading from './laoding';
+
+const configLoading = {
+  type: 'spin',
+  color: 'red',
+  height: '2%',
+  width: '2%'
+};
 
 const VideoDetail = ({video}) => {
   if(!video){
-    return <div>Loading...</div>;
+    return <Loading config={configLoading} />;
   }
 
   const videoId = video.id.videoId;
